@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 namespace EasyNow.Web.Controllers
@@ -11,6 +12,8 @@ namespace EasyNow.Web.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+        public IServiceProvider ServiceProvider { get; set; }
+
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"

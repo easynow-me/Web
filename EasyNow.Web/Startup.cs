@@ -1,6 +1,10 @@
+using System;
+using System.Linq;
+using System.Reflection;
 using Autofac;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -16,7 +20,6 @@ namespace EasyNow.Web
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddOptions();
@@ -25,15 +28,20 @@ namespace EasyNow.Web
 
         public void ConfigureContainer(ContainerBuilder builder)
         {
+            builder.RegisterAssemblyTypes(this.GetType().Assembly)
+                .Where(
+                    t =>
+                        t.Name.EndsWith("Controller", StringComparison.Ordinal)&&t.GetCustomAttributes<ControllerAttribute>().Any()).PropertiesAutowired();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseStaticFiles();
 
             app.UseRouting();
 

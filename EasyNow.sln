@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyNow.Web", "EasyNow.Web\EasyNow.Web.csproj", "{CE4266F3-510D-47DB-8BF2-91FA7BF1CC63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyNow.Web", "EasyNow.Web\EasyNow.Web.csproj", "{CE4266F3-510D-47DB-8BF2-91FA7BF1CC63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyNow.BusinessObject", "EasyNow.BusinessObject\EasyNow.BusinessObject.csproj", "{2ADCCEE7-56B6-4FCD-9B8A-F38D14BA2257}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyNow.DataTransferObject", "EasyNow.DataTransferObject\EasyNow.DataTransferObject.csproj", "{DF00C4E8-B13A-4E37-B96F-C9F0CB53E781}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{CE4266F3-510D-47DB-8BF2-91FA7BF1CC63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE4266F3-510D-47DB-8BF2-91FA7BF1CC63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE4266F3-510D-47DB-8BF2-91FA7BF1CC63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ADCCEE7-56B6-4FCD-9B8A-F38D14BA2257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ADCCEE7-56B6-4FCD-9B8A-F38D14BA2257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ADCCEE7-56B6-4FCD-9B8A-F38D14BA2257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ADCCEE7-56B6-4FCD-9B8A-F38D14BA2257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF00C4E8-B13A-4E37-B96F-C9F0CB53E781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF00C4E8-B13A-4E37-B96F-C9F0CB53E781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF00C4E8-B13A-4E37-B96F-C9F0CB53E781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF00C4E8-B13A-4E37-B96F-C9F0CB53E781}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
